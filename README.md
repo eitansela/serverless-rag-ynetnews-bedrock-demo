@@ -1,0 +1,1 @@
+# serverless-rag-ynetnews-bedrock-demo
