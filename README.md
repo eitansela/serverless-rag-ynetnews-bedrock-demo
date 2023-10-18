@@ -10,7 +10,7 @@ Enterprises need to query domain specific and proprietary data and use the infor
 
 ## Pattern
 
-In these labs we will explore the following QA pattern:
+In this repo we will explore the following QA pattern:
 
 We use Retrieval Augmented Generation which improves upon the first where we concatenate our questions with as much relevant context as possible, which is likely to contain the answers or information we are looking for.
 The challenge here, There is a limit on how much contextual information can be used is determined by the token limit of the model.
