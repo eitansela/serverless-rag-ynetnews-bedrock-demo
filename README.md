@@ -8,17 +8,11 @@ Generative AI models like Amazon Titan, Anthropic Claude and AI21 Jurassic 2 use
 
 Enterprises need to query domain specific and proprietary data and use the information to answer questions, and more generally data on which the model has not been trained on.
 
-## Patterns
+## Pattern
 
-In these labs we will explore two QA patterns:
+In these labs we will explore the following QA pattern:
 
-1. First where questions are sent to the model where by we will get answers based on the base model with no modifications.
-This poses a challenge,
-outputs are generic to common world information, not specific to a customers specific business, and there is no source of information.
-
-    ![Q&A](./images/51-simple-rag.png)
-
-2. The Second Pattern where we use Retrieval Augmented Generation which improves upon the first where we concatenate our questions with as much relevant context as possible, which is likely to contain the answers or information we are looking for.
+We use Retrieval Augmented Generation which improves upon the first where we concatenate our questions with as much relevant context as possible, which is likely to contain the answers or information we are looking for.
 The challenge here, There is a limit on how much contextual information can be used is determined by the token limit of the model.
     ![RAG Q&A](./images/52-rag-with-external-data.png)
 
@@ -49,13 +43,6 @@ Additionally, we have prepared the embeddings to be loaded in the vector databas
 
 Take note you can use Titan Embeddings to obtain the embeddings of the user question, then use those embedding to retrieve the most relevant documents from the vector database, build a prompt concatenating the top 3 documents and invoke the LLM model via Bedrock.
 
-## Setup
-Before running any of the labs in this section ensure you've run the [Bedrock boto3 setup notebook](../00_Intro/bedrock_boto3_setup.ipynb#Prerequisites).
-
 ## Notebooks
 
-1. [Q&A with model knowledge and small context](./00_qa_w_bedrock_titan.ipynb)
-
-1. [Q&A with RAG](./01_qa_w_rag_claude.ipynb)
-
-1. [Q&A with RAG and Pinecone](./02_qa_w_rag_claude_pinecone.ipynb)
+1. [Retrieval Augmented Question & Answering on Ynet data in Hebrew with Amazon Bedrock using LangChain & Amazon OpenSearch](./qa_ynet_w_rag_hebrew_embeddings_opensearch-serverless.ipynb)
